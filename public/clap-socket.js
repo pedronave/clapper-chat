@@ -18,4 +18,8 @@ $(function () {
     
     out.scrollTop = out.scrollHeight - out.clientHeight;
   });
+
+  socket.on('user update', function(count) {
+    $('#clapper-count').text(`Currently clapping: ${count}`)
+  });
 });

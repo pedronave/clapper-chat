@@ -13,6 +13,7 @@ var clappers = 0;
 
 io.on('connection', (socket) => {
   clappers++;
+  io.emit('user update', clappers);
 
   socket.on('clap', () => {
     io.emit('clap', { });
@@ -20,6 +21,7 @@ io.on('connection', (socket) => {
 
   socket.on('disconnection', () => {
     clappers--;
+    io.emit('user update', clappers);
   });
 });
 
