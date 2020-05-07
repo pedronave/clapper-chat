@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font: 20px Helvetica, Arial;
+}
+
+form button {
+  font-size: x-large;
+  background: rgb(78, 134, 255);
+  border: 1px solid #17009c;
+
+  padding: 10px;
+  width: 100%;
+
+  align-self: flex-end;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form button:hover {
+  background: rgb(106, 165, 255);
+}
+
+form button:active {
+  background: rgb(56, 119, 255);
+}
+
+#chatbox {
+  overflow: auto;
+}
+
+#messages {
+  overflow: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#messages li {
+  padding: 5px 10px;
+}
+
+#messages li:nth-child(odd) {
+  background: #eee;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
