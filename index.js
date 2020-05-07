@@ -19,7 +19,7 @@ io.on('connection', (socket) => {
     io.emit('clap', { });
   });
 
-  socket.on('disconnection', () => {
+  socket.on('disconnect', () => {
     clappers--;
     io.emit('user update', clappers);
   });
